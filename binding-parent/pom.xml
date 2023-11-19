@@ -55,7 +55,7 @@ LICENSE file.
             <dependency>
               <groupId>site.ycsb</groupId>
               <artifactId>datastore-specific-descriptor</artifactId>
-              <version>${project.version}</version>
+              <version>0.18.0-SNAPSHOT</version>
             </dependency>
           </dependencies>
           <configuration>
