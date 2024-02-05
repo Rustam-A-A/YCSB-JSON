@@ -44,7 +44,7 @@ LICENSE file.
       <!--
       <systemPath>${myPath}</systemPath>
       -->
-      <systemPath>/Users/rustam/.m2/repository/com/allanbank/mongodb-async-driver/2.0.1/mongodb-async-driver-2.0.1.jar</systemPath>
+      <systemPath>/home/rustam/.m2/repository/com/allanbank/mongodb-async-driver/2.0.1/mongodb-async-driver-2.0.1.jar</systemPath>
 
     </dependency>
     <dependency>
