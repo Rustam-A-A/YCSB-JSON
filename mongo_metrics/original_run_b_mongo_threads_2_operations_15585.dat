@@ -1,0 +1,33 @@
+//bin/java  -classpath /home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/conf:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/core/target/core-0.18.0-SNAPSHOT.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/core/target/dependency/HdrHistogram-2.1.4.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/core/target/dependency/htrace-core4-4.1.0-incubating.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/core/target/dependency/jackson-core-asl-1.9.4.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/core/target/dependency/jackson-mapper-asl-1.9.4.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/mongodb/target/mongodb-binding-0.18.0-SNAPSHOT.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/mongodb/target/dependency/logback-classic-1.2.11.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/mongodb/target/dependency/logback-core-1.2.11.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/mongodb/target/dependency/mongo-java-driver-3.11.0.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/mongodb/target/dependency/slf4j-api-1.7.25.jar:/home/rustam/IdeaProjects/YCSB-JSON-Not-Modified/mongodb/target/dependency/snappy-java-1.1.7.1.jar site.ycsb.Client -t -db site.ycsb.db.MongoDbClient -P workloads/workloadb -threads 2 -p recordcount=15585 -p mongodb.url=mongodb://localhost:27017/ycsb?w=0
+mongo client connection created with mongodb://localhost:27017/ycsb?w=0
+[OVERALL], RunTime(ms), 557
+[OVERALL], Throughput(ops/sec), 1795.3321364452424
+[TOTAL_GCS_G1_Young_Generation], Count, 5
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 11
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 1.9748653500897666
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 5
+[TOTAL_GC_TIME], Time(ms), 11
+[TOTAL_GC_TIME_%], Time(%), 1.9748653500897666
+[READ], Operations, 951
+[READ], AverageLatency(us), 399.2471083070452
+[READ], MinLatency(us), 91
+[READ], MaxLatency(us), 39135
+[READ], 95thPercentileLatency(us), 659
+[READ], 99thPercentileLatency(us), 2229
+[READ], Return=OK, 951
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 1486.0
+[CLEANUP], MinLatency(us), 3
+[CLEANUP], MaxLatency(us), 2969
+[CLEANUP], 95thPercentileLatency(us), 2969
+[CLEANUP], 99thPercentileLatency(us), 2969
+[SCAN], Operations, 49
+[SCAN], AverageLatency(us), 4424.265306122449
+[SCAN], MinLatency(us), 337
+[SCAN], MaxLatency(us), 15959
+[SCAN], 95thPercentileLatency(us), 11639
+[SCAN], 99thPercentileLatency(us), 15959
+[SCAN], Return=OK, 49

@@ -146,8 +146,10 @@ public class PostgreNoSQLDBClient extends DB {
       }
       readStatement.setString(1, key);
       ResultSet resultSet = readStatement.executeQuery();
+//      System.out.println("READ READ READ: " + key);
       if (!resultSet.next()) {
         resultSet.close();
+//        LOG.info("no next read: {}", key);
         return  Status.NOT_FOUND;
       }
 
@@ -157,11 +159,13 @@ public class PostgreNoSQLDBClient extends DB {
             String field = resultSet.getString(2);
             String value = resultSet.getString(3);
             result.put(field, new StringByteIterator(value));
+//            System.out.println("RESULT WAS PUT WHEN FIELD == NULL");
           }while (resultSet.next());
         } else {
           for (String field : fields) {
             String value = resultSet.getString(field);
             result.put(field, new StringByteIterator(value));
+//            System.out.println("RESULT WAS PUT WHEN FIELD != NULL");
           }
         }
       }
