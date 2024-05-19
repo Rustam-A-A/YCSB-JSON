@@ -139,8 +139,6 @@ public class PostgreNoSQLDBClient extends DB {
     StatementType type = new StatementType(StatementType.Type.READ, tableName, fields);
     PreparedStatement readStatement = cachedStatements.get(type);
     try {
-//      StatementType type = new StatementType(StatementType.Type.READ, tableName, fields);
-//      PreparedStatement readStatement = cachedStatements.get(type);
       if (readStatement == null) {
         readStatement = createAndCacheReadStatement(type);
       }
@@ -186,8 +184,6 @@ public class PostgreNoSQLDBClient extends DB {
     StatementType type = new StatementType(StatementType.Type.SCAN, tableName, fields);
     PreparedStatement scanStatement = cachedStatements.get(type);
     try {
-//      StatementType type = new StatementType(StatementType.Type.SCAN, tableName, fields);
-//      PreparedStatement scanStatement = cachedStatements.get(type);
       if (scanStatement == null) {
         scanStatement = createAndCacheScanStatement(type);
       }
@@ -221,8 +217,6 @@ public class PostgreNoSQLDBClient extends DB {
     StatementType type = new StatementType(StatementType.Type.UPDATE, tableName, null);
     PreparedStatement updateStatement = cachedStatements.get(type);
     try{
-//      StatementType type = new StatementType(StatementType.Type.UPDATE, tableName, null);
-//      PreparedStatement updateStatement = cachedStatements.get(type);
       if (updateStatement == null) {
         updateStatement = createAndCacheUpdateStatement(type);
       }
@@ -257,8 +251,6 @@ public class PostgreNoSQLDBClient extends DB {
     StatementType type = new StatementType(StatementType.Type.INSERT, tableName, null);
     PreparedStatement insertStatement = cachedStatements.get(type);
     try{
-//      StatementType type = new StatementType(StatementType.Type.INSERT, tableName, null);
-//      PreparedStatement insertStatement = cachedStatements.get(type);
       if (insertStatement == null) {
         insertStatement = createAndCacheInsertStatement(type);
       }
@@ -312,12 +304,6 @@ public class PostgreNoSQLDBClient extends DB {
 
   private PreparedStatement createAndCacheReadStatement(StatementType readType)
       throws SQLException{
-//    PreparedStatement readStatement = connection.prepareStatement(createReadStatement(readType));
-//    PreparedStatement statement = cachedStatements.putIfAbsent(readType, readStatement);
-//    if (statement == null) {
-//      return readStatement;
-//    }
-//    return statement;
     return connection.prepareStatement(createReadStatement(readType));
   }
 
@@ -342,12 +328,6 @@ public class PostgreNoSQLDBClient extends DB {
 
   private PreparedStatement createAndCacheScanStatement(StatementType scanType)
       throws SQLException{
-//    PreparedStatement scanStatement = connection.prepareStatement(createScanStatement(scanType));
-//    PreparedStatement statement = cachedStatements.putIfAbsent(scanType, scanStatement);
-//    if (statement == null) {
-//      return scanStatement;
-//    }
-//    return statement;
     return connection.prepareStatement(createScanStatement(scanType));
   }
 
@@ -371,12 +351,6 @@ public class PostgreNoSQLDBClient extends DB {
 
   public PreparedStatement createAndCacheUpdateStatement(StatementType updateType)
       throws SQLException{
-//    PreparedStatement updateStatement = connection.prepareStatement(createUpdateStatement(updateType));
-//    PreparedStatement statement = cachedStatements.putIfAbsent(updateType, updateStatement);
-//    if (statement == null) {
-//      return updateStatement;
-//    }
-//    return statement;
     return connection.prepareStatement(createUpdateStatement(updateType));
   }
 
@@ -394,12 +368,6 @@ public class PostgreNoSQLDBClient extends DB {
 
   private PreparedStatement createAndCacheInsertStatement(StatementType insertType)
       throws SQLException{
-//    PreparedStatement insertStatement = connection.prepareStatement(createInsertStatement(insertType));
-//    PreparedStatement statement = cachedStatements.putIfAbsent(insertType, insertStatement);
-//    if (statement == null) {
-//      return insertStatement;
-//    }
-//    return statement;
     return connection.prepareStatement(createInsertStatement(insertType));
   }
 
