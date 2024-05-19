@@ -1,0 +1,70 @@
+#!/bin/bash
+
+#Hello
+
+# database
+db=$1
+
+# workload="fnight"
+workload=$2
+
+# the first parameter is the number of the threads
+t=$3
+
+# the second parameter is the number of the measures
+n=$4
+
+# directory to collect measurements
+measurement_dir=$5
+
+# records in database
+#$recordcount=15585
+
+for (( i=1; i<$n+1; i++ ))
+do
+   echo "Iteration number $i"
+
+   if [ $db == "mongo" ]; then   
+      if [ $workload == "fnight" ]; then
+         ./bin/ycsb.sh run mongodb -s -P workloads/workloade -p recordcount=15585 -threads $t -p mongodb.url=mongodb://localhost:27017/ycsb?w=0 > $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat
+      elif [ $workload == "routine" ]; then
+         ./bin/ycsb.sh run mongodb -s -P workloads/workloadb -p recordcount=15585 -threads $t -p mongodb.url=mongodb://localhost:27017/ycsb?w=0 > $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat     
+      elif [ $workload == "update" ]; then
+         ./bin/ycsb.sh run mongodb -s -P workloads/workloada -p recordcount=15585 -threads $t -p mongodb.url=mongodb://localhost:27017/ycsb?w=0 > $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat
+      else
+         echo "== unknown workload =="
+      fi
+   elif [ $db == "postgres" ]; then 
+      if [ $workload == "fnight" ]; then
+         ./bin/ycsb.sh run postgrenosql -P ./workloads/workloade -p recordcount=15585 -threads $t -P ./postgrenosql/conf/postgrenosql.properties > $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat
+      elif [ $workload == "routine" ]; then
+         ./bin/ycsb.sh run postgrenosql -P ./workloads/workloadb -p recordcount=15585 -threads $t -P ./postgrenosql/conf/postgrenosql.properties > $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat
+      elif [ $workload == "update" ]; then
+         ./bin/ycsb.sh run postgrenosql -P ./workloads/workloada -p recordcount=15585 -threads $t -P ./postgrenosql/conf/postgrenosql.properties > $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat
+      else
+         echo "== unknown workload =="
+      fi
+   else 
+      echo "== There is no DB chosen =="
+   fi   
+
+#   grep ^\[CLEANUP\], workloads' $measurement_dir/threads_$t_$i.dat >> $measurement_dir/info_threads_$t.txt
+#   grep ^\[OVERALL\], Throughput' $measurement_dir/threads_$t_$i.dat >> $measurement_dir/info_threads_$t.txt
+#   grep '^\[SCAN\], AverageLatency(us)' $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat >> $measurement_dir/$db.op_$workload.info_threads_$t.txt
+
+   if [ $workload == "fnight" ]; then
+      grep '^\[SCAN\], AverageLatency(us)' $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat >> $measurement_dir/$db.op_$workload.info_threads_$t.txt
+   elif [ $workload == "routine" ]; then
+      grep '^\[READ\], AverageLatency(us)' $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat >> $measurement_dir/$db.op_$workload.info_threads_$t.txt
+   elif [ $workload == "update" ]; then
+      grep '^\[UPDATE\], AverageLatency(us)' $measurement_dir/$db.op_$workload.threads_$t.mes_$i.dat >> $measurement_dir/$db.op_$workload.info_threads_$t.txt
+   else
+      echo "== unknown workload =="
+   fi
+
+
+
+done
+
+#grep -Eo [0-9]{1,}' $measurement_dir/info_threads_$t.txt >> $measurement_dir/info_only_digital.txt
+#grep -Eo '[0-9]+' $measurement_dir/info_threads_$t.txt >> $measurement_dir/info_only_digital_3.txt

@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Specify the file containing the numbers
+
+# database
+db=$1
+
+# number of threads
+t=$2
+
+# workload 
+workload=$3
+
+# directory
+measurement_dir=$4
+
+# File to read measures
+file="$measurement_dir/$db.op_$workload.info_threads_$t.txt"
+
+
+# Read numbers into an array
+#readarray -t numbers < <(grep '^\[SCAN\], AverageLatency(us)' "$file" | awk -F', ' '{print $3}')
+
+if [ $workload == "fnight" ]; then
+    readarray -t numbers < <(grep '^\[SCAN\], AverageLatency(us)' "$file" | awk -F', ' '{print $3}')
+elif [ $workload == "routine" ]; then
+    readarray -t numbers < <(grep '^\[READ\], AverageLatency(us)' "$file" | awk -F', ' '{print $3}')
+elif [ $workload == "update" ]; then
+    readarray -t numbers < <(grep '^\[UPDATE\], AverageLatency(us)' "$file" | awk -F', ' '{print $3}')
+else    
+    echo "== unknown workload =="
+fi
+
+
+# Calculate the average
+sum=0
+count=0
+
+for num in "${numbers[@]}"; do
+    sum=$(echo "$sum + $num" | bc)
+    ((count++))
+done
+
+
+if [ $count -gt 0 ]; then
+    average=$(echo "scale=2; $sum / $count" | bc)
+else
+    echo "No numbers found in the file."
+    exit 1
+fi
+
+# Calculate the standard deviation
+sum_sq_diff=0
+for num in "${numbers[@]}"; do
+    diff=$(echo "$num - $average" | bc)
+    sq_diff=$(echo "$diff^2" | bc)
+    sum_sq_diff=$(echo "$sum_sq_diff + $sq_diff" | bc)
+done
+
+
+if [ $count -gt 1 ]; then
+    variance=$(echo "scale=2; $sum_sq_diff / ($count - 1)" | bc)
+    std_dev=$(echo "scale=2; sqrt($variance)" | bc)
+else
+    echo "Not enough data to calculate standard deviation."
+    exit 1
+fi
+
+# Print results
+echo "------------------------------------"
+echo "Number of Threads: $t"
+echo "Average Latency: $average"
+echo "Standard Deviation: $std_dev"
+echo "Number of Measures: $count"

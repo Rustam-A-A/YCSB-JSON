@@ -1,0 +1,134 @@
+Sun May  5 02:05:43 PM UTC 2024
+database: mongo; original; workload: update
+------------------------------------
+Number of Threads: 1
+Average Latency: 157.76
+Standard Deviation: 27.37
+Number of Measures: 20
+------------------------------------
+Number of Threads: 20
+Average Latency: 1692.88
+Standard Deviation: 292.61
+Number of Measures: 20
+------------------------------------
+Number of Threads: 40
+Average Latency: 3000.78
+Standard Deviation: 580.12
+Number of Measures: 20
+------------------------------------
+Number of Threads: 60
+Average Latency: 5051.85
+Standard Deviation: 1151.12
+Number of Measures: 20
+------------------------------------
+Number of Threads: 80
+Average Latency: 7647.17
+Standard Deviation: 1924.03
+Number of Measures: 20
+------------------------------------
+Number of Threads: 100
+Average Latency: 9468.11
+Standard Deviation: 1474.68
+Number of Measures: 20
+------------------------------------
+Number of Threads: 120
+Average Latency: 12829.44
+Standard Deviation: 3235.20
+Number of Measures: 20
+------------------------------------
+Number of Threads: 140
+Average Latency: 16755.66
+Standard Deviation: 5476.44
+Number of Measures: 20
+------------------------------------
+Number of Threads: 160
+Average Latency: 20013.03
+Standard Deviation: 6368.55
+Number of Measures: 20
+------------------------------------
+Number of Threads: 180
+Average Latency: 25266.20
+Standard Deviation: 8229.78
+Number of Measures: 20
+------------------------------------
+Number of Threads: 200
+Average Latency: 25020.37
+Standard Deviation: 9554.22
+Number of Measures: 20
+------------------------------------
+Number of Threads: 220
+Average Latency: 29650.57
+Standard Deviation: 7023.21
+Number of Measures: 20
+------------------------------------
+Number of Threads: 240
+Average Latency: 34691.09
+Standard Deviation: 9718.60
+Number of Measures: 20
+------------------------------------
+Number of Threads: 260
+Average Latency: 38615.08
+Standard Deviation: 11131.39
+Number of Measures: 20
+------------------------------------
+Number of Threads: 280
+Average Latency: 43046.25
+Standard Deviation: 9928.01
+Number of Measures: 20
+------------------------------------
+Number of Threads: 300
+Average Latency: 47248.00
+Standard Deviation: 5562.63
+Number of Measures: 20
+------------------------------------
+Number of Threads: 320
+Average Latency: 52672.15
+Standard Deviation: 7708.13
+Number of Measures: 20
+------------------------------------
+Number of Threads: 340
+Average Latency: 52583.81
+Standard Deviation: 14604.98
+Number of Measures: 20
+------------------------------------
+Number of Threads: 360
+Average Latency: 54686.44
+Standard Deviation: 9456.64
+Number of Measures: 20
+------------------------------------
+Number of Threads: 380
+Average Latency: 58801.25
+Standard Deviation: 12187.39
+Number of Measures: 20
+------------------------------------
+Number of Threads: 400
+Average Latency: 53087.40
+Standard Deviation: 11503.19
+Number of Measures: 20
+------------------------------------
+Number of Threads: 420
+Average Latency: 63706.55
+Standard Deviation: 9509.04
+Number of Measures: 20
+------------------------------------
+Number of Threads: 440
+Average Latency: 66142.15
+Standard Deviation: 12684.12
+Number of Measures: 20
+------------------------------------
+Number of Threads: 460
+Average Latency: 73205.36
+Standard Deviation: 12473.16
+Number of Measures: 20
+------------------------------------
+Number of Threads: 480
+Average Latency: 81544.67
+Standard Deviation: 14441.59
+Number of Measures: 20
+------------------------------------
+Number of Threads: 500
+Average Latency: 80001.39
+Standard Deviation: 15844.39
+Number of Measures: 20
+                                
+Sun May  5 02:11:21 PM UTC 2024

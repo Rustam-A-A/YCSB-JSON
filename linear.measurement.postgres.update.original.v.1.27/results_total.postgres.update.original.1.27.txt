@@ -1,0 +1,238 @@
+Tue Apr 23 09:23:50 PM UTC 2024
+database: postgres; original; workload: update
+------------------------------------
+Number of Threads: 1
+Average of Average: 985.43
+SD of Average: 236.75
+Average of PL: 1862.50
+SD of PL: 389.92
+Average of Throughput: 1123.38
+SD of Throughput: 136.33
+Number of Measures: 20
+------------------------------------
+Number of Threads: 20
+Average of Average: 13264.86
+SD of Average: 2536.60
+Average of PL: 32048.60
+SD of PL: 10563.91
+Average of Throughput: 1093.21
+SD of Throughput: 178.35
+Number of Measures: 20
+------------------------------------
+Number of Threads: 40
+Average of Average: 25731.23
+SD of Average: 3438.33
+Average of PL: 56496.60
+SD of PL: 10988.07
+Average of Throughput: 1127.62
+SD of Throughput: 115.11
+Number of Measures: 20
+------------------------------------
+Number of Threads: 60
+Average of Average: 33850.16
+SD of Average: 2333.67
+Average of PL: 77042.20
+SD of PL: 21416.40
+Average of Throughput: 1232.87
+SD of Throughput: 51.07
+Number of Measures: 20
+------------------------------------
+Number of Threads: 80
+Average of Average: 47119.37
+SD of Average: 4315.98
+Average of PL: 109211.80
+SD of PL: 39204.52
+Average of Throughput: 1149.89
+SD of Throughput: 86.20
+Number of Measures: 20
+------------------------------------
+Number of Threads: 100
+Average of Average: 57542.81
+SD of Average: 5087.30
+Average of PL: 116171.80
+SD of PL: 30339.26
+Average of Throughput: 1180.31
+SD of Throughput: 64.44
+Number of Measures: 20
+------------------------------------
+Number of Threads: 120
+Average of Average: 71337.44
+SD of Average: 8853.30
+Average of PL: 147627.80
+SD of PL: 47616.00
+Average of Throughput: 1122.72
+SD of Throughput: 99.80
+Number of Measures: 20
+------------------------------------
+Number of Threads: 140
+Average of Average: 80602.49
+SD of Average: 9340.28
+Average of PL: 159067.80
+SD of PL: 36998.82
+Average of Throughput: 1129.05
+SD of Throughput: 108.17
+Number of Measures: 20
+------------------------------------
+Number of Threads: 160
+Average of Average: 101697.31
+SD of Average: 20637.19
+Average of PL: 188792.60
+SD of PL: 61623.52
+Average of Throughput: 1067.91
+SD of Throughput: 147.46
+Number of Measures: 20
+------------------------------------
+Number of Threads: 180
+Average of Average: 133000.94
+SD of Average: 119992.85
+Average of PL: 279506.20
+SD of PL: 301751.05
+Average of Throughput: 1047.85
+SD of Throughput: 249.68
+Number of Measures: 20
+------------------------------------
+Number of Threads: 200
+Average of Average: 113262.81
+SD of Average: 10206.49
+Average of PL: 207640.60
+SD of PL: 36236.14
+Average of Throughput: 1116.59
+SD of Throughput: 70.45
+Number of Measures: 20
+------------------------------------
+Number of Threads: 220
+Average of Average: 129183.54
+SD of Average: 23616.36
+Average of PL: 238603.80
+SD of PL: 71311.38
+Average of Throughput: 1088.67
+SD of Throughput: 127.13
+Number of Measures: 20
+------------------------------------
+Number of Threads: 240
+Average of Average: 130920.13
+SD of Average: 13597.24
+Average of PL: 235250.20
+SD of PL: 45146.49
+Average of Throughput: 1114.15
+SD of Throughput: 101.96
+Number of Measures: 20
+------------------------------------
+Number of Threads: 260
+Average of Average: 136538.31
+SD of Average: 11778.57
+Average of PL: 242501.40
+SD of PL: 35763.99
+Average of Throughput: 1123.57
+SD of Throughput: 60.06
+Number of Measures: 20
+------------------------------------
+Number of Threads: 280
+Average of Average: 142521.29
+SD of Average: 12292.71
+Average of PL: 244907.80
+SD of PL: 29707.15
+Average of Throughput: 1143.99
+SD of Throughput: 52.96
+Number of Measures: 20
+------------------------------------
+Number of Threads: 300
+Average of Average: 172053.56
+SD of Average: 43131.79
+Average of PL: 308683.80
+SD of PL: 96463.20
+Average of Throughput: 1043.07
+SD of Throughput: 137.80
+Number of Measures: 20
+------------------------------------
+Number of Threads: 320
+Average of Average: 174821.28
+SD of Average: 24685.14
+Average of PL: 306859.80
+SD of PL: 62287.47
+Average of Throughput: 1065.01
+SD of Throughput: 91.43
+Number of Measures: 20
+------------------------------------
+Number of Threads: 340
+Average of Average: 208855.40
+SD of Average: 47287.54
+Average of PL: 351051.80
+SD of PL: 98639.99
+Average of Throughput: 977.04
+SD of Throughput: 169.83
+Number of Measures: 20
+------------------------------------
+Number of Threads: 360
+Average of Average: 223049.37
+SD of Average: 45229.95
+Average of PL: 385048.60
+SD of PL: 88703.20
+Average of Throughput: 940.40
+SD of Throughput: 129.60
+Number of Measures: 20
+------------------------------------
+Number of Threads: 380
+Average of Average: 219723.46
+SD of Average: 34998.03
+Average of PL: 367653.40
+SD of PL: 82178.97
+Average of Throughput: 982.80
+SD of Throughput: 126.54
+Number of Measures: 20
+------------------------------------
+Number of Threads: 400
+Average of Average: 246221.10
+SD of Average: 82035.75
+Average of PL: 426891.80
+SD of PL: 169581.92
+Average of Throughput: 950.57
+SD of Throughput: 177.78
+Number of Measures: 20
+------------------------------------
+Number of Threads: 420
+Average of Average: 230512.65
+SD of Average: 15909.35
+Average of PL: 365515.80
+SD of PL: 44678.34
+Average of Throughput: 1003.02
+SD of Throughput: 57.34
+Number of Measures: 20
+------------------------------------
+Number of Threads: 440
+Average of Average: 219720.99
+SD of Average: 39948.64
+Average of PL: 378149.40
+SD of PL: 65353.86
+Average of Throughput: 1059.55
+SD of Throughput: 81.97
+Number of Measures: 20
+------------------------------------
+Number of Threads: 460
+Average of Average: 241895.52
+SD of Average: 39217.10
+Average of PL: 405912.60
+SD of PL: 53173.73
+Average of Throughput: 990.13
+SD of Throughput: 72.25
+Number of Measures: 20
+------------------------------------
+Number of Threads: 480
+Average of Average: 259906.83
+SD of Average: 43217.93
+Average of PL: 406706.20
+SD of PL: 69068.18
+Average of Throughput: 1017.79
+SD of Throughput: 84.22
+Number of Measures: 20
+------------------------------------
+Number of Threads: 500
+Average of Average: 261718.24
+SD of Average: 40972.51
+Average of PL: 424741.40
+SD of PL: 72048.15
+Average of Throughput: 989.95
+SD of Throughput: 90.32
+Number of Measures: 20
+                                
+Tue Apr 23 09:23:56 PM UTC 2024

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Define database and query details
+DATABASE_NAME="test"
+QUERY="DELETE FROM usertable;"
+
+# Execute psql command directly as the postgres user
+# Note: Assumes .pgpass is configured or PGPASSWORD environment variable is set for postgres user
+sudo -u postgres PGPASSWORD='postgres'  psql -d "$DATABASE_NAME" -c "$QUERY"
+
+
+# Check the exit status of the psql command to confirm success
+if [ $? -eq 0 ]; then
+    echo "Data deleted successfully."
+else
+    echo "Failed to delete data."
+fi
